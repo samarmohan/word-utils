@@ -1,24 +1,13 @@
-# message-reverser
+# Message Reverser
 
-## Project setup
-```
-npm install
-```
+### About
+The most basic project ever.
+This is a simple site developed with Vue, that reverses a message.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Status
+I am working on deployment...
+You can clone the repo before I deploy it.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Contributing
+Well, how can you contribute to such a small project...?
+Don't contribute!
