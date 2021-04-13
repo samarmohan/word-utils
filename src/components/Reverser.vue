@@ -1,14 +1,23 @@
 <template>
-	<div class="reverser">
-		<h2>A simple message reverser</h2>
-		<div class="container ">
-			<p>{{ toBeReversed }}</p>
-			<input id="copyText" class="input" v-model="toBeReversed" />
-			<button v-on:click="copy" class="btn btn-success btn-sm m-2">
+	<div class="container">
+		<p class="is-size-2">A simple message reverser</p>
+		<div class="field">
+			<div class="control">
+				<input
+					id="copyText"
+					class="input is-info is-rounded is-hovered is-focused"
+					type="text"
+					v-model="toBeReversed"
+				/>
+			</div>
+			<button
+				v-on:click="copy"
+				class="button is-success is-rounded is-small m-2"
+			>
 				Copy Text
 			</button>
 			<br /><br />
-			<button class="btn btn-info" v-on:click="reverseMessage">
+			<button class="button is-info is-rounded" v-on:click="reverseMessage">
 				Reverse!
 			</button>
 		</div>
@@ -42,20 +51,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-	margin: 40px 0 0;
-}
-ul {
-	list-style-type: none;
-	padding: 0;
-}
-li {
-	display: inline-block;
-	margin: 0 10px;
-}
-a {
-	color: #42b983;
-}
 button:active {
 	transform: translate(1px, 1px);
 }
