@@ -10,8 +10,8 @@ export const ReverseWords = () => {
 	};
 
 	return (
-		<div>
-			<p className="is-size-2">A simple message reverser</p>
+		<>
+			<p>A simple message reverser (reverses just the words, keeps the words in the same place)</p>
 			<p>{message}</p>
 			<div>
 				<input
@@ -29,6 +29,6 @@ export const ReverseWords = () => {
 					Reverse
 				</button>
 			</div>
-		</div>
+		</>
 	);
 };

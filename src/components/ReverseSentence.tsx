@@ -10,8 +10,8 @@ export const ReverseSentence = () => {
 	};
 
 	return (
-		<div>
-			<p>A simple message reverser</p>
+		<>
+			<p>A simple message reverser (reverses the full sentence)</p>
 			<p>{message}</p>
 			<div>
 				<input
@@ -29,6 +29,6 @@ export const ReverseSentence = () => {
 					Reverse
 				</button>
 			</div>
-		</div>
+		</>
 	);
 };

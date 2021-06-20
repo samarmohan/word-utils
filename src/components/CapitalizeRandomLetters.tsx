@@ -10,25 +10,23 @@ export const CapitalizeRandomLetters = () => {
 	};
 
 	return (
-		<div>
+		<>
 			<p>Random Caps</p>
 			<p>{message}</p>
-			<div>
-				<input
-					id="text"
-					type="text"
-					placeholder="text to caps"
-					name="text"
-					value={message}
-					onChange={handleChange}
-				/>
-				<button
-					className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-					onClick={() => capitalizeRandomLetters(message, setMessage)}
-				>
-					Reverse
-				</button>
-			</div>
-		</div>
+			<input
+				id="text"
+				type="text"
+				placeholder="text to capitalize"
+				name="text"
+				value={message}
+				onChange={handleChange}
+			/>
+			<button
+				className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+				onClick={() => capitalizeRandomLetters(message, setMessage)}
+			>
+				Randomly capitalize!
+			</button>
+		</>
 	);
 };
