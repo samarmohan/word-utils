@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { reverseSentence } from "../utils/reverseSentence";
+import { Button } from "./ui/Button";
+import { Header } from "./ui/Header";
+import { TextArea } from "./ui/TextArea";
 
 export const ReverseSentence = () => {
 	const [message, setMessage] = useState("");
+	const [modifiedMessage, setModifiedMessage] = useState("");
 
 	const handleChange = (event: any) => {
 		event.persist();
@@ -11,24 +15,19 @@ export const ReverseSentence = () => {
 
 	return (
 		<>
-			<p>A simple message reverser (reverses the full sentence)</p>
-			<p>{message}</p>
-			<div>
-				<input
-					id="text"
-					type="text"
-					placeholder="text to reverse"
-					name="text"
-					value={message}
-					onChange={handleChange}
-				/>
-				<button
-					className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-					onClick={() => reverseSentence(message, setMessage)}
-				>
-					Reverse
-				</button>
-			</div>
+			<Header
+				title="Reverses the sentence"
+				subtitle="both the words and letters flip"
+			/>
+			<TextArea
+				placeholder="text to reverse"
+				value={message}
+				onChange={handleChange}
+			/>
+			<Button onClick={() => reverseSentence(message, setModifiedMessage)}>
+				Reverse
+			</Button>
+			<TextArea placeholder="" value={modifiedMessage} />
 		</>
 	);
 };

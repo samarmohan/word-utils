@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { capitalizeRandomLetters } from "../utils/capitalizeRandomLetters";
+import { Button } from "./ui/Button";
+import { Header } from "./ui/Header";
+import { TextArea } from "./ui/TextArea";
 
 export const CapitalizeRandomLetters = () => {
 	const [message, setMessage] = useState("");
+	const [modifiedMessage, setModifiedMessage] = useState("");
 
 	const handleChange = (event: any) => {
 		event.persist();
@@ -11,22 +15,21 @@ export const CapitalizeRandomLetters = () => {
 
 	return (
 		<>
-			<p>Random Caps</p>
-			<p>{message}</p>
-			<input
-				id="text"
-				type="text"
+			<Header
+				title="Capitalizes every other letter"
+				subtitle="capitalizes every other letter in the phrase, also known as the SpongeBob Mocking Meme"
+			/>
+			<TextArea
 				placeholder="text to capitalize"
-				name="text"
 				value={message}
 				onChange={handleChange}
 			/>
-			<button
-				className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-				onClick={() => capitalizeRandomLetters(message, setMessage)}
+			<Button
+				onClick={() => capitalizeRandomLetters(message, setModifiedMessage)}
 			>
 				Randomly capitalize!
-			</button>
+			</Button>
+			<TextArea placeholder="" value={modifiedMessage} />
 		</>
 	);
 };

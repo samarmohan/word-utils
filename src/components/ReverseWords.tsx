@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { reverseWords } from "../utils/reverseWords";
+import { Button } from "./ui/Button";
+import { Header } from "./ui/Header";
+import { TextArea } from "./ui/TextArea";
 
 export const ReverseWords = () => {
 	const [message, setMessage] = useState("");
+	const [modifiedMessage, setModifiedMessage] = useState("");
 
 	const handleChange = (event: any) => {
 		event.persist();
@@ -11,24 +15,19 @@ export const ReverseWords = () => {
 
 	return (
 		<>
-			<p>A simple message reverser (reverses just the words, keeps the words in the same place)</p>
-			<p>{message}</p>
-			<div>
-				<input
-					id="text"
-					type="text"
-					placeholder="text to reverse"
-					name="text"
-					value={message}
-					onChange={handleChange}
-				/>
-				<button
-					className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-					onClick={() => reverseWords(message, setMessage)}
-				>
-					Reverse
-				</button>
-			</div>
+			<Header
+				title="Reverses the words in place"
+				subtitle="reverses the just words and keeps them in the same place"
+			/>
+			<TextArea
+				placeholder="text to reverse"
+				value={message}
+				onChange={handleChange}
+			/>
+			<Button onClick={() => reverseWords(message, setModifiedMessage)}>
+				Reverse
+			</Button>
+			<TextArea placeholder="" value={modifiedMessage} />
 		</>
 	);
 };

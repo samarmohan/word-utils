@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { CapitalizeRandomLetters } from "./components/CapitalizeRandomLetters";
 import { Home } from "./components/Home";
-import { Navbar } from "./components/layout/Navbar";
+import { Navbar } from "./components/ui/Navbar";
 import { ReverseSentence } from "./components/ReverseSentence";
 import { ReverseWords } from "./components/ReverseWords";
 

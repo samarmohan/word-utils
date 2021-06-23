@@ -13,10 +13,10 @@ function toggleCase(str: string) {
 }
 
 export const capitalizeRandomLetters = (
-	sentence: any,
+	sentence: string,
 	setFunction: Function
-) => {
-	setFunction(
+): React.Dispatch<React.SetStateAction<string>> => {
+	return setFunction(
 		sentence
 			.split("")
 			.map((char: any, index: number) => {
