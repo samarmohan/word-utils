@@ -38,7 +38,7 @@ export const CapitalizeRandomLetters = () => {
 			>
 				Switch <i className="fas fa-repeat-alt"></i>
 			</Button>
-			<TextArea placeholder="" value={modifiedMessage} />
+			<TextArea value={modifiedMessage} />
 		</>
 	);
 };
