@@ -27,6 +27,13 @@ export const ReverseWords = () => {
 			<Button onClick={() => reverseWords(message, setModifiedMessage)}>
 				Reverse
 			</Button>
+			<Button
+				secondary
+				onClick={() => {
+					setMessage(modifiedMessage);
+					setModifiedMessage(message);
+				}}
+			>Switch<i className="fas fa-repeat-alt"></i></Button>
 			<TextArea placeholder="" value={modifiedMessage} />
 		</>
 	);
