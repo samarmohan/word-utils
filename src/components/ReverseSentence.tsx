@@ -25,7 +25,7 @@ export const ReverseSentence = () => {
 				onChange={handleChange}
 			/>
 			<Button onClick={() => reverseSentence(message, setModifiedMessage)}>
-				Reverse
+				Reverse <i className="fad fa-history"></i>
 			</Button>
 			<Button
 				secondary

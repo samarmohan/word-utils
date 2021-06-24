@@ -27,7 +27,7 @@ export const CapitalizeRandomLetters = () => {
 			<Button
 				onClick={() => capitalizeRandomLetters(message, setModifiedMessage)}
 			>
-				Randomly capitalize!
+				Randomly capitalize <i className="fad fa-random"></i>
 			</Button>
 			<Button
 				secondary
