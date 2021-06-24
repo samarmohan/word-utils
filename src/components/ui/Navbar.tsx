@@ -69,10 +69,11 @@ export const Navbar = () => {
 							<li className="nav-item">
 								<a
 									className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-									href="#pablo"
+									target="_blank"
+									href="https://github.com/samarmohan/word-utils"
 								>
-									<i className="fas fa-share-alt text-lg leading-lg text-white opacity-75"></i>
-									<span className="ml-2">Share</span>
+									<i className="fab fa-github text-lg leading-lg text-white opacity-75"></i>
+									<span className="ml-2">Github</span>
 								</a>
 							</li>
 						</ul>
