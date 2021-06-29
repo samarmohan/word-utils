@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { reverseWords } from "../utils/reverseWords";
+import { reverseWordsInPlace } from "@samarmohan/utils";
 import { Button } from "./ui/Button";
 import { Header } from "./ui/Header";
 import { TextArea } from "./ui/TextArea";
@@ -24,7 +24,7 @@ export const ReverseWords = () => {
 				value={message}
 				onChange={handleChange}
 			/>
-			<Button onClick={() => reverseWords(message, setModifiedMessage)}>
+			<Button onClick={() => setModifiedMessage(reverseWordsInPlace(message))}>
 				Reverse <i className="fal fa-history"></i>
 			</Button>
 			<Button

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { capitalizeRandomLetters } from "../utils/capitalizeRandomLetters";
+import { changeCapsOfEveryOtherLetter } from "@samarmohan/utils";
 import { Button } from "./ui/Button";
 import { Header } from "./ui/Header";
 import { TextArea } from "./ui/TextArea";
@@ -25,7 +25,9 @@ export const CapitalizeRandomLetters = () => {
 				onChange={handleChange}
 			/>
 			<Button
-				onClick={() => capitalizeRandomLetters(message, setModifiedMessage)}
+				onClick={() =>
+					setModifiedMessage(changeCapsOfEveryOtherLetter(message))
+				}
 			>
 				Randomly capitalize <i className="fad fa-random"></i>
 			</Button>

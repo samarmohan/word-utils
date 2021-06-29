@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { reverseSentence } from "../utils/reverseSentence";
+import { reverseSentence } from "@samarmohan/utils";
 import { Button } from "./ui/Button";
 import { Header } from "./ui/Header";
 import { TextArea } from "./ui/TextArea";
@@ -24,7 +24,7 @@ export const ReverseSentence = () => {
 				value={message}
 				onChange={handleChange}
 			/>
-			<Button onClick={() => reverseSentence(message, setModifiedMessage)}>
+			<Button onClick={() => setModifiedMessage(reverseSentence(message))}>
 				Reverse <i className="fad fa-history"></i>
 			</Button>
 			<Button
