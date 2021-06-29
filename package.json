@@ -1,44 +1,62 @@
 {
-	"name": "word-utils",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@craco/craco": "^6.1.2",
-		"@samarmohan/utils": "^0.1.0",
-		"@types/node": "^12.0.0",
-		"@types/react": "^17.0.0",
-		"@types/react-dom": "^17.0.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-router-dom": "^5.2.0",
-		"react-scripts": "4.0.3",
-		"typescript": "^4.1.2"
-	},
-	"scripts": {
-		"start": "craco start",
-		"build": "craco build",
-		"test": "craco test",
-		"eject": "react-scripts eject",
-		"deploy": "yarn build && npx netlify deploy --prod"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@tailwindcss/custom-forms": "^0.2.1",
-		"@tailwindcss/forms": "^0.3.3",
-		"@types/react-router-dom": "^5.1.7",
-		"autoprefixer": "9",
-		"postcss": "7",
-		"tailwindcss": "npm:@tailwindcss/postcss7-compat"
-	}
+  "name": "word-utils",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.1.2",
+    "@samarmohan/utils": "^0.1.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-text-loop": "^2.3.0",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && npx netlify deploy --dir=build --prod",
+    "lint": "eslint --fix src",
+    "format": "prettier --write src",
+    "lintAndFormat": "yarn lint && yarn format",
+    "commit": "git add -A && cz -S",
+    "prepare": "husky install"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "autoprefixer": "9",
+    "commitizen": "^4.2.4",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "postcss": "7",
+    "prettier": "^2.3.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
 }
