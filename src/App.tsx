@@ -9,9 +9,9 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Route exact path="/" component={Home} />
-      <div className="flex">
-        <div className="m-auto">
+      <div className="flex justify-center flex-col items-center">
+        <Route exact path="/" component={Home} />
+        <div className="flex flex-col items-center h-screen">
           <Switch>
             <Route exact path="/reverse/sentence" component={ReverseSentence} />
             <Route exact path="/reverse/words" component={ReverseWords} />

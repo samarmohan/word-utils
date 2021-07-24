@@ -1,23 +1,43 @@
 import { Link } from "react-router-dom";
 import TextLoop from "react-text-loop";
 
+const styles = {
+  text: {
+    fontSize: "4rem",
+    fontWeight: 800,
+    marginBottom: "1rem",
+    lineHeight: "4.3rem",
+  },
+};
+
 export const Home = () => {
+  const phrasesToLoopThrough = [
+    "Transform",
+    "Manipulate",
+    "Play With",
+    "Translate",
+  ];
+
   return (
-    <div className="text-center py-20 bg-gradient-to-tr from-green-500 to-blue-500 px-6 m-auto justify-center">
-      <h2 className="text-4xl font-bold mb-2 text-white">Word Utils</h2>
-      <h3>
-        <TextLoop
-          className="text-2xl mb-8 text-gray-200"
-          interval={2000}
-          // eslint-disable-next-line react/no-children-prop
-          children={[
-            "Beautiful Interface",
-            "Reverse Words and Sentences",
-            "Randomly Capitalize",
-            "Translate to Pig Latin and Morse Code",
-          ]}
-        ></TextLoop>
-      </h3>
+    <div className="flex items-center flex-col justify-center py-20 px-6">
+      <h1 className="text-center text-4xl font-bold mb-2 text-black">
+        The Best Place on the Internet <br /> to{" "}
+        <TextLoop interval={2000}>
+          {phrasesToLoopThrough.map((phrase: string, index: number) => (
+            <span
+              style={{
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="bg-clip-text bg-gradient-to-tr from-green-500 to-blue-500"
+              key={index}
+            >
+              {phrase}
+            </span>
+          ))}
+        </TextLoop>{" "}
+        Text
+      </h1>
       <Link to="/reverse/sentence">
         <button className="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
           Get Started
