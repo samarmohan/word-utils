@@ -17,12 +17,12 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && npx netlify deploy --dir=build --prod",
-    "lint": "eslint --fix src",
+    "deploy": "yarn build && yarn run netlify deploy --dir=build --prod",
+    "lint": "yarn run eslint --fix src",
     "format": "yarn run prettier --write src",
     "formatAndLint": "yarn format && yarn lint",
-    "commit": "git add -A && cz -S",
-    "prepare": "husky install"
+    "commit": "git add -A && yarn run cz -S",
+    "prepare": "yarn run husky install"
   },
   "browserslist": {
     "production": [
