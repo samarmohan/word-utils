@@ -24,18 +24,20 @@ export const ReverseWords = () => {
         value={message}
         onChange={handleChange}
       />
-      <Button onClick={() => reverseWords(message, setModifiedMessage)}>
-        Reverse <i className="fal fa-history"></i>
-      </Button>
-      <Button
-        secondary
-        onClick={() => {
-          setMessage(modifiedMessage);
-          setModifiedMessage(message);
-        }}
-      >
-        Switch <i className="fas fa-repeat-alt"></i>
-      </Button>
+      <div className="flex">
+        <Button onClick={() => reverseWords(message, setModifiedMessage)}>
+          Reverse <i className="fal fa-history"></i>
+        </Button>
+        <Button
+          secondary
+          onClick={() => {
+            setMessage(modifiedMessage);
+            setModifiedMessage(message);
+          }}
+        >
+          Switch <i className="fas fa-repeat-alt"></i>
+        </Button>
+      </div>
       <TextArea value={modifiedMessage} />
     </>
   );

@@ -24,20 +24,22 @@ export const CapitalizeRandomLetters = () => {
         value={message}
         onChange={handleChange}
       />
-      <Button
-        onClick={() => capitalizeRandomLetters(message, setModifiedMessage)}
-      >
-        Randomly capitalize <i className="fad fa-random"></i>
-      </Button>
-      <Button
-        secondary
-        onClick={() => {
-          setMessage(modifiedMessage);
-          setModifiedMessage(message);
-        }}
-      >
-        Switch <i className="fas fa-repeat-alt"></i>
-      </Button>
+      <div className="flex">
+        <Button
+          onClick={() => capitalizeRandomLetters(message, setModifiedMessage)}
+        >
+          Randomly capitalize <i className="fad fa-random"></i>
+        </Button>
+        <Button
+          secondary
+          onClick={() => {
+            setMessage(modifiedMessage);
+            setModifiedMessage(message);
+          }}
+        >
+          Switch <i className="fas fa-repeat-alt"></i>
+        </Button>
+      </div>
       <TextArea value={modifiedMessage} />
     </>
   );

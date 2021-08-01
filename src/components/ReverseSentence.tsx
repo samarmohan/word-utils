@@ -24,18 +24,20 @@ export const ReverseSentence = () => {
         value={message}
         onChange={handleChange}
       />
-      <Button onClick={() => reverseSentence(message, setModifiedMessage)}>
-        Reverse <i className="fad fa-history"></i>
-      </Button>
-      <Button
-        secondary
-        onClick={() => {
-          setMessage(modifiedMessage);
-          setModifiedMessage(message);
-        }}
-      >
-        Switch <i className="fas fa-repeat-alt"></i>
-      </Button>
+      <div className="flex">
+        <Button onClick={() => reverseSentence(message, setModifiedMessage)}>
+          Reverse <i className="fad fa-history"></i>
+        </Button>
+        <Button
+          secondary
+          onClick={() => {
+            setMessage(modifiedMessage);
+            setModifiedMessage(message);
+          }}
+        >
+          Switch <i className="fas fa-repeat-alt"></i>
+        </Button>
+      </div>
       <TextArea value={modifiedMessage} />
     </>
   );
