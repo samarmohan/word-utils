@@ -1,6 +1,8 @@
+import { TypedFunction } from "../types";
+
 export const reverseWords = (
   sentence: string,
-  setFunction: Function
+  setFunction: TypedFunction
 ): React.Dispatch<React.SetStateAction<string>> => {
   const words: any = sentence.match(/\S+/g);
   let result = "";
