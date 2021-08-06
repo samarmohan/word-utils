@@ -1,3 +1,3 @@
-export type TypedFunction = {
-  (sentence: string): React.Dispatch<React.SetStateAction<string>>;
-};
+import { Dispatch, SetStateAction } from "react";
+
+export type SetStateType = Dispatch<SetStateAction<string>>;

@@ -1,15 +1,6 @@
 import { Link } from "react-router-dom";
 import TextLoop from "react-text-loop";
 
-const styles = {
-  text: {
-    fontSize: "4rem",
-    fontWeight: 800,
-    marginBottom: "1rem",
-    lineHeight: "4.3rem",
-  },
-};
-
 export const Home = () => {
   const phrasesToLoopThrough = [
     "Transform",
@@ -39,7 +30,7 @@ export const Home = () => {
         Text
       </h1>
       <Link to="/reverse/sentence">
-        <button className="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
+        <button className="m-2 bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
           Get Started
         </button>
       </Link>

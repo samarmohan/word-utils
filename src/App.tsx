@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { CapitalizeRandomLetters } from "./components/CapitalizeRandomLetters";
-import { Home } from "./components/Home";
-import { Navbar } from "./components/ui/Navbar";
-import { ReverseSentence } from "./components/ReverseSentence";
-import { ReverseWords } from "./components/ReverseWords";
+import { CapitalizeRandomLetters } from "./pages/CapitalizeRandomLetters";
+import { Home } from "./pages/Home";
+import { Navbar } from "./ui/Navbar";
+import { ReverseSentence } from "./pages/ReverseSentence";
+import { ReverseWords } from "./pages/ReverseWords";
 
 const App = () => {
   return (
@@ -13,7 +13,11 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <div className="flex flex-col items-center h-screen">
           <Switch>
-            <Route exact path="/reverse/sentence" component={ReverseSentence} />
+            <Route
+              exact
+              path="/reverse/sentences"
+              component={ReverseSentence}
+            />
             <Route exact path="/reverse/words" component={ReverseWords} />
             <Route
               exact

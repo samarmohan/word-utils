@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { reverseSentence } from "../utils/reverseSentence";
-import { Button } from "./ui/Button";
-import { Header } from "./ui/Header";
-import { TextArea } from "./ui/TextArea";
+import { Button } from "../ui/Button";
+import { Header } from "../ui/Header";
+import { TextArea } from "../ui/TextArea";
 
 export const ReverseSentence = () => {
   const [message, setMessage] = useState("");

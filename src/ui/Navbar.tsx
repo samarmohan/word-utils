@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../../logo.svg";
+import logo from "../logo.svg";
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -38,22 +39,22 @@ export const Navbar = () => {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="/reverse/sentence/"
-                >
-                  <i className="fad fa-history text-lg leading-lg text-white opacity-75"></i>
-                  <span className="ml-2">Reverse Sentence</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="/reverse/words/"
-                >
-                  <i className="fal fa-history text-lg leading-lg text-white opacity-75"></i>
-                  <span className="ml-2">Reverse Words in Place</span>
-                </a>
+                <Menu>
+                  <MenuButton>
+                    <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                      <i className="fad fa-history text-lg leading-lg text-white opacity-75"></i>
+                      <span className="ml-2">Reverse</span>
+                    </a>
+                  </MenuButton>
+                  <MenuList>
+                    <a href="/reverse/words">
+                      <MenuItem>Words in place</MenuItem>
+                    </a>
+                    <a href="/reverse/sentences">
+                      <MenuItem>Sentences</MenuItem>
+                    </a>
+                  </MenuList>
+                </Menu>
               </li>
               <li className="nav-item">
                 <Link

@@ -1,4 +1,4 @@
-import { TypedFunction } from "../types";
+import { SetStateType } from "../types";
 
 function toggleCase(str: string) {
   if (str.length !== 1) return str;
@@ -16,8 +16,8 @@ function toggleCase(str: string) {
 
 export const capitalizeRandomLetters = (
   sentence: string,
-  setFunction: TypedFunction
-): React.Dispatch<React.SetStateAction<string>> => {
+  setFunction: SetStateType
+) => {
   return setFunction(
     sentence
       .split("")

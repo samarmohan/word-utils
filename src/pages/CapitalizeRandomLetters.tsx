@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { reverseWords } from "../utils/reverseWords";
-import { Button } from "./ui/Button";
-import { Header } from "./ui/Header";
-import { TextArea } from "./ui/TextArea";
+import { capitalizeRandomLetters } from "../utils/capitalizeRandomLetters";
+import { Button } from "../ui/Button";
+import { Header } from "../ui/Header";
+import { TextArea } from "../ui/TextArea";
 
-export const ReverseWords = () => {
+export const CapitalizeRandomLetters = () => {
   const [message, setMessage] = useState("");
   const [modifiedMessage, setModifiedMessage] = useState("");
 
@@ -16,17 +16,19 @@ export const ReverseWords = () => {
   return (
     <>
       <Header
-        title="Reverses the words in place"
-        subtitle="reverses the just words and keeps them in the same place"
+        title="Capitalizes every other letter"
+        subtitle="capitalizes every other letter in the phrase, also known as the SpongeBob Mocking Meme"
       />
       <TextArea
-        placeholder="text to reverse"
+        placeholder="text to capitalize"
         value={message}
         onChange={handleChange}
       />
       <div className="flex">
-        <Button onClick={() => reverseWords(message, setModifiedMessage)}>
-          Reverse <i className="fal fa-history"></i>
+        <Button
+          onClick={() => capitalizeRandomLetters(message, setModifiedMessage)}
+        >
+          Randomly capitalize <i className="fad fa-random"></i>
         </Button>
         <Button
           secondary
