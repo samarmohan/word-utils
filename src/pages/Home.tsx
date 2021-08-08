@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import TextLoop from "react-text-loop";
+import { TextLoop } from "react-text-loop-next";
 
 export const Home = () => {
   const phrasesToLoopThrough = [
