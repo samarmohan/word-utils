@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { capitalizeRandomLetters } from "../utils/capitalizeRandomLetters";
 import { Button } from "../ui/Button";
 import { Header } from "../ui/Header";
 import { TextArea } from "../ui/TextArea";
+import { capitalizeRandomLetters } from "../lib/capitalizeRandomLetters";
+import { useState } from "react";
 
 export const CapitalizeRandomLetters = () => {
   const [message, setMessage] = useState("");

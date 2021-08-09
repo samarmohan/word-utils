@@ -41,10 +41,10 @@ export const Navbar = () => {
               <li className="nav-item">
                 <Menu>
                   <MenuButton>
-                    <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                    <p className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                       <i className="fad fa-history text-lg leading-lg text-white opacity-75"></i>
                       <span className="ml-2">Reverse</span>
-                    </a>
+                    </p>
                   </MenuButton>
                   <MenuList>
                     <a href="/reverse/words">

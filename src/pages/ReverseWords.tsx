@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { reverseWords } from "../utils/reverseWords";
 import { Button } from "../ui/Button";
 import { Header } from "../ui/Header";
 import { TextArea } from "../ui/TextArea";
+import { reverseWords } from "../lib/reverseWords";
+import { useState } from "react";
 
 export const ReverseWords = () => {
   const [message, setMessage] = useState("");

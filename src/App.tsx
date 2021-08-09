@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { CapitalizeRandomLetters } from "./pages/CapitalizeRandomLetters";
 import { Home } from "./pages/Home";
 import { Navbar } from "./ui/Navbar";
