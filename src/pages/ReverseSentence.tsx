@@ -17,7 +17,7 @@ export const ReverseSentence = () => {
     <>
       <Header
         title="Reverses the sentence"
-        subtitle="both the words and letters flip"
+        subtitle="the letters in the words flip and the placement of the words in the sentence flips"
       />
       <TextArea
         placeholder="text to reverse"
@@ -25,7 +25,7 @@ export const ReverseSentence = () => {
         onChange={handleChange}
       />
       <div className="flex">
-        <Button onClick={() => reverseSentence(message, setModifiedMessage)}>
+        <Button onClick={() => setModifiedMessage(reverseSentence(message))}>
           Reverse <i className="fad fa-history"></i>
         </Button>
         <Button

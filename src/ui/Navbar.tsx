@@ -86,15 +86,6 @@ export const Navbar = () => {
               <li className="nav-item">
                 <Link
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="/capitalize-random-letters/"
-                >
-                  <i className="fad fa-random text-lg leading-lg text-white opacity-75"></i>
-                  <span className="ml-2">Randomly Capitalize</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                   target="_blank"
                   to="https://github.com/samarmohan/word-utils"
                   rel="noreferrer"

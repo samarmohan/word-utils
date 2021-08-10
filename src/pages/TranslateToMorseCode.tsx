@@ -17,7 +17,7 @@ export const TranslateToMorseCode = () => {
     <>
       <Header
         title="Translates to morse code"
-        subtitle="morse code uses . (short) and - (long) as letters"
+        subtitle="Letters are separated by spaces and words are separated by slashes."
       />
       <TextArea
         placeholder="text to translate"
@@ -28,7 +28,7 @@ export const TranslateToMorseCode = () => {
         <Button
           onClick={() => setModifiedMessage(translateToMorseCode(message))}
         >
-          Translate! <i className="fad fa-random"></i>
+          Translate! <i className="fas fa-language"></i>
         </Button>
         <Button
           secondary

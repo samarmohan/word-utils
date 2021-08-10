@@ -1,5 +1,3 @@
-import { SetStateType } from "../types";
-
 function toggleCase(str: string) {
   if (str.length !== 1) return str;
 
@@ -14,17 +12,12 @@ function toggleCase(str: string) {
   return str;
 }
 
-export const capitalizeRandomLetters = (
-  sentence: string,
-  setFunction: SetStateType
-) => {
-  return setFunction(
-    sentence
-      .split("")
-      .map((char: any, index: number) => {
-        if (index % 2 === 0) return toggleCase(char);
-        return char;
-      })
-      .join("")
-  );
+export const capitalizeRandomLetters = (sentence: string) => {
+  return sentence
+    .split("")
+    .map((char: any, index: number) => {
+      if (index % 2 === 0) return toggleCase(char);
+      return char;
+    })
+    .join("");
 };

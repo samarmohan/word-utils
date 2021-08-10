@@ -26,7 +26,7 @@ export const CapitalizeRandomLetters = () => {
       />
       <div className="flex">
         <Button
-          onClick={() => capitalizeRandomLetters(message, setModifiedMessage)}
+          onClick={() => setModifiedMessage(capitalizeRandomLetters(message))}
         >
           Randomly capitalize <i className="fad fa-random"></i>
         </Button>

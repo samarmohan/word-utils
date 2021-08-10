@@ -17,7 +17,7 @@ export const TranslateToPigLatin = () => {
     <>
       <Header
         title="Translates to pig latin"
-        subtitle="translates each word to a pig latin word, pig latin -> igpay atin-lay"
+        subtitle="There is no dash in between the ig and pay"
       />
       <TextArea
         placeholder="text to translate"
@@ -28,7 +28,7 @@ export const TranslateToPigLatin = () => {
         <Button
           onClick={() => setModifiedMessage(translateToPigLatin(message))}
         >
-          Translate! <i className="fad fa-random"></i>
+          Translate! <i className="fas fa-language"></i>
         </Button>
         <Button
           secondary

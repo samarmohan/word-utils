@@ -25,7 +25,7 @@ export const ReverseWords = () => {
         onChange={handleChange}
       />
       <div className="flex">
-        <Button onClick={() => reverseWords(message, setModifiedMessage)}>
+        <Button onClick={() => setModifiedMessage(reverseWords(message))}>
           Reverse <i className="fal fa-history"></i>
         </Button>
         <Button

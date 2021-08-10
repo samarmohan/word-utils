@@ -1,4 +1,4 @@
-export const translateToMorseCode = (str: string) => {
+export const translateToMorseCode = (sentence: string) => {
   type MorseCode = {
     [index: string]: string;
   };
@@ -46,7 +46,7 @@ export const translateToMorseCode = (str: string) => {
     "/": "-..-.",
     "@": ".--.-.",
   };
-  return str
+  return sentence
     .toUpperCase()
     .split(" ")
     .map((word) =>
